@@ -1,5 +1,5 @@
 class TicTacToeController < ApplicationController
-  def play
+  def board
   end
 
   def game_over

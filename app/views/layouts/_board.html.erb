@@ -1,34 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.card {
-    box-shadow: 0 64px 128px 0 rgba(100,0,0,1000);
-    transition: 0.3s;
-    width: 40%;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-    padding: 2px 16px;
-}
-</style>
-</head>
-<body>
-
-<h2>Board</h2>
-
-<div class="card">
-  <%= link_to image_tag("tile.png", alt: "Tile"), 'localhost:3000' %>
-  <div class="container">
-    <h4><b>Test Space</b></h4> 
-    <p>Null</p> 
-  </div>
+<h1>
+<%= s1a = render 'layouts/space' %>
+<%= s1b = render 'layouts/space' %>
+<%= s1c = render 'layouts/space' %>
+</h1>
+<div>
+<%= s2a = render 'layouts/space' %>
+<%= s2b = render 'layouts/space' %>
+<%= s2c = render 'layouts/space' %>
 </div>
-
-</body>
-</html> 
+<div>
+<%= s3a = render 'layouts/space' %>
+<%= s3b = render 'layouts/space' %>
+<%= s3c = render 'layouts/space' %>
+</div>
