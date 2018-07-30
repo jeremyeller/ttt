@@ -5,8 +5,12 @@
         <h1>Tic Tac Toe</h1>
     </head>
     <body>
+        <div>
         <%= game.output %>
         <%= game.turn_count %>
+        </div>
         <%= render 'layouts/dropdown' %>
+        <%= render 'layouts/board' %>
+        <img src="/assests/images/tile.png" alt="Tile">
     </body>
 </html>
