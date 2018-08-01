@@ -1,15 +1,65 @@
+class Game < ApplicationRecord
+    has_one :board
+end
+
+class Board < ApplicationRecord
+    belongs_to :game
+    has_many :spaces
+end
+
+class Spaces < ApplicationRecord
+    belongs_to :board
+end
+
+# first
+class CreateGames < ActiveRecord::Migration[5.2]
+    def change
+      create_table :games do |t|
+  
+        t.timestamps
+      end
+    end
+end
+  
+# second migration
+class CreateBoard < ActiveRecord::Migration[5.2]
+    def change
+      create_table :boards do |t|
+        t.references :game
+        t.timestamps
+      end
+    end
+end
+
+# second migration
+class CreateSpaces< ActiveRecord::Migration[5.2]
+    def change
+      create_table :spaces do |t|
+        # field for position
+        # field for current value
+        t.references :board
+        t.timestamps
+      end
+    end
+end
+
+
 class Game
+
     def initialize
         spaces = [[Tile.new, Tile.new, Tile.new], [Tile.new, Tile.new, Tile.new], [Tile.new, Tile.new, Tile.new]]
         @game_board = Board.new(spaces)
         @turn_counter = Counter.new
     end
+
     def output
         @game_board.output
     end
+
     def turn_count
         "Turn #{@turn_counter.num}"
     end
+
     def turn
         loop do
             puts @game_board.output
