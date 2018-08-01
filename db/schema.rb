@@ -15,4 +15,8 @@ ActiveRecord::Schema.define(version: 0) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "spaces", primary_key: "number", id: :integer, default: nil, force: :cascade do |t|
+    t.integer "value", null: false, default: 0
+  end
+
 end

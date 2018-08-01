@@ -1,6 +1,6 @@
 class Game
     def initialize
-        spaces = [[Space.new, Space.new, Space.new], [Space.new, Space.new, Space.new], [Space.new, Space.new, Space.new]]
+        spaces = [[Tile.new, Tile.new, Tile.new], [Tile.new, Tile.new, Tile.new], [Tile.new, Tile.new, Tile.new]]
         @game_board = Board.new(spaces)
         @turn_counter = Counter.new
     end

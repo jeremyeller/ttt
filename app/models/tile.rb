@@ -1,4 +1,4 @@
-class Space
+class Tile
     def initialize(value = 0)
       @value = value
     end
