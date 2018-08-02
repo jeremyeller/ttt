@@ -1,3 +1,3 @@
-class Spaces < ActiveRecord::Base
-
+class Spaces < ApplicationRecord
+    belongs_to :board
 end
