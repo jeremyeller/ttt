@@ -3,6 +3,6 @@ class GameController < ApplicationController
         @games = Game.all
     end
     def new
-        @game = Game.create
+        @game = PlayGame.new
     end
 end
