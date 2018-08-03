@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  root 'tic_tac_toe#board'
-  root to: 'games#index'
+  #root 'tic_tac_toe#board'
+  root 'game#index'
+  get '/index', to: 'game#index'
+  get '/new', to: 'game#new'
   get '/games', to: 'tic_tac_toe#games'
+  get '/board', to: 'tic_tac_toe#board'
   resources :game
   #get '/board', to: 'tic_tac_toe#board'
   #get '/game_over', to: 'tic_tac_toe#game_over'

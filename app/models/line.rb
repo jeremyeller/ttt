@@ -6,6 +6,6 @@ class Line
       @array
     end
     def complete?
-      @array[0].value == @array[1].value && @array[0].value == @array[2].value && @array[0].value != 0
+      @array[0].value == @array[1].value && @array[0].value == @array[2].value && @array[0].value != '-'
     end
 end

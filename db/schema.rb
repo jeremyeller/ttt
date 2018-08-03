@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(version: 2018_08_01_180006) do
     t.index ["game_id"], name: "index_boards_on_game_id"
   end
 
+  create_table "games", force: :cascade do |t|
+  end
+
   create_table "spaces", primary_key: "number", id: :integer, default: nil, force: :cascade do |t|
     t.string "value", default: "-", null: false
     t.bigint "board_id"

@@ -1,4 +1,4 @@
-class Board
+class GameBoard
     def initialize(array)
       @array = array
       @column1 = Line.new([@array[0][0], @array[1][0], @array[2][0]])
@@ -11,7 +11,7 @@ class Board
   
       @diagonal1 = Line.new([@array[0][0], @array[1][1], @array[2][2]])
       @diagonal2 = Line.new([@array[0][2], @array[1][1], @array[2][0]])
-      @output = "+1---+2---+3---+\n|  #{@array[0][0].display_value} |  #{@array[0][1].display_value} |  #{@array[0][2].display_value} |\n+4---+5---+6---+\n|  #{@array[1][0].display_value} |  #{@array[1][1].display_value} |  #{@array[1][2].display_value} |\n+7---+8---+9---+\n|  #{@array[2][0].display_value} |  #{@array[2][1].display_value} |  #{@array[2][2].display_value} |\n+----+----+----+"
+      @output = "+1---+2---+3---+\n|  #{@array[0][0].value} |  #{@array[0][1].value} |  #{@array[0][2].value} |\n+4---+5---+6---+\n|  #{@array[1][0].value} |  #{@array[1][1].value} |  #{@array[1][2].value} |\n+7---+8---+9---+\n|  #{@array[2][0].value} |  #{@array[2][1].value} |  #{@array[2][2].value} |\n+----+----+----+"
     end
     def output
         @output
