@@ -25,7 +25,8 @@ ActiveRecord::Schema.define(version: 2018_08_01_180006) do
   create_table "games", force: :cascade do |t|
   end
 
-  create_table "spaces", primary_key: "number", id: :integer, default: nil, force: :cascade do |t|
+  create_table "spaces", force: :cascade do |t|
+    t.integer "number", null: false
     t.string "value", default: "-", null: false
     t.bigint "board_id"
     t.datetime "created_at", null: false
